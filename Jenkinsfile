@@ -1,10 +1,10 @@
 Jenkinsfile (Scripted Pipeline)
-/* 需要 Docker Pipeline 插件 */
-node('docker') {
-    checkout scm
+node {
     stage('Build') {
-        docker.image('node:6.3').inside {
-            sh 'npm --version'
-        }
+        sh 'echo "Hello World"'
+        sh '''
+            echo "Multiline shell steps works too"
+            ls -lah
+        '''
     }
 }
