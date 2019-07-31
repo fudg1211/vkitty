@@ -1,10 +1,13 @@
-Jenkinsfile (Scripted Pipeline)
 node {
-    stage('Build') {
-        sh 'echo "Hello World"'
-        sh '''
-            echo "Multiline shell steps works too"
-            ls -lah
-        '''
+    stage('build-using-scm'){
+     echo 'build';
+    }
+    
+    stage('test-using-scm'){
+     echo 'test';
+    }
+    
+    stage('deploy-using-scm'){
+     echo 'deploy';
     }
 }
