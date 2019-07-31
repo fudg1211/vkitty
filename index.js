@@ -1,4 +1,5 @@
 var Kitty = require('./lib/kitty.js');
+console.log(111);
 
 module.exports = {
     src:function(globs,options){
